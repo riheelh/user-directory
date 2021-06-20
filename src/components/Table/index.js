@@ -1,13 +1,13 @@
 import React from "react";
+import dateFormat from "dateformat";
+//https://www.npmjs.com/package/dateformat
 
 const Table = (props) => {
   return (
     <>
       {props.dataArray.length !== 0 ? (
         <>
-          {/* <h1>There's some data, look at it:</h1> */}
-
-          <table class="table table-striped">
+          <table className="table table-striped">
             <thead>
               <tr>
                 <th scope="col">Image</th>
@@ -18,20 +18,15 @@ const Table = (props) => {
               </tr>
             </thead>
             <tbody>
-           
-                {props.dataArray.map((element) => (
-                  <>
-                    <tr>
-                      {/* <th scope="row">1</th> */}
-                      <td>{element.picture.thumbnail}</td>
-                      <td>{element.name.first} {element.name.last}</td>
-                      <td>{element.phone}</td>
-                      <td>{element.email}</td>
-                      <td>{element.dob.age}</td>
-                    </tr>
-                  </>
-                ))}
-            
+              {props.dataArray.map((element) => (
+                <tr key={element.login.username}>
+                  <td><img alt={element.picture.thumbnail} src={element.picture.thumbnail}/></td>
+                  <td>{element.name.first} {element.name.last}</td>
+                  <td>{element.phone}</td>
+                  <td><a href={`mailto:${element.email}`}>{element.email}</a></td>
+                  <td>{dateFormat(element.dob.date, "dd-mm-yyyy")}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </>
