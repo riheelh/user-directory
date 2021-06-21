@@ -1,25 +1,28 @@
-import React from 'react'
+import React, {useRef} from 'react'
 
-const Count = (props) => {
-    return (
-        <>
-        {/* <button onClick={props.searchUser}> Search </button> */}
-
-        <form>
+const SearchForm = (props) => {
+    const inputEl = useRef("")
+    const getSearch = () => {
+        props.handleSearch(inputEl.current.value)
+    }
+    return ( 
+        <form className="search">
             <div className="form-group">
-                <label htmlFor="search">Search:</label>
-                <input
-                    name="search"
-                    type="text"
-                    id="search"
-                />
-                <button onClick={props.searchUser} className="btn btn-primary mt-3">
-                Search
-                </button>
+            <input
+                ref={inputEl}
+                value={props.term}
+                // onChange={props.handleSearch}
+                onChange={getSearch}
+                name="term"
+                list="term"
+                type="text"
+                className="form-control"
+                placeholder="Search keyword"
+                id="term"
+            />
             </div>
         </form>
-        </>
-    )
+    );
 }
 
-export default Count
+export default SearchForm;
