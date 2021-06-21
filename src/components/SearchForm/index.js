@@ -8,18 +8,18 @@ const SearchForm = (props) => {
     return ( 
         <form className="search">
             <div className="form-group">
-            <input
-                ref={inputEl}
-                value={props.term}
-                // onChange={props.handleSearch}
-                onChange={getSearch}
-                name="term"
-                list="term"
-                type="text"
-                className="form-control"
-                placeholder="Search keyword"
-                id="term"
-            />
+                <input
+                    ref={inputEl}
+                    value={props.term}
+                    // onChange={props.handleSearch}
+                    onChange={getSearch}
+                    name="term"
+                    list="term"
+                    type="text"
+                    className="form-control"
+                    placeholder="Search keyword"
+                    id="term"
+                />
             </div>
         </form>
     );

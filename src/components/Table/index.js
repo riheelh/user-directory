@@ -2,7 +2,10 @@ import React from "react";
 import dateFormat from "dateformat";
 //https://www.npmjs.com/package/dateformat
 
+
+
 const Table = (props) => {
+
   return (
     <>
       {props.dataArray.length !== 0 ? (

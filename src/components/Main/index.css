@@ -1,0 +1,21 @@
+.newCard {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 0.3rem auto;
+    width: 80rem;
+    /* max-width: 90%; */
+    /* border-radius: 12px; */
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(243, 240, 240, 0.25);
+  }
+
+  .Card {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 40rem;
+    /* max-width: 90%; */
+    /* border-radius: 12px; */
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(243, 240, 240, 0.25);
+  }
