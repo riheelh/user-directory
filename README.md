@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description  
-(Ongoing) A simple user directory with search and filtering features.
+A simple user directory with search and filtering features.
 
 
 ![screen01](./assets/screen.PNG)
