@@ -5,8 +5,10 @@
 ## Description  
 A simple user directory with search and filtering features.
 
+**Live URL :** https://riheelh.github.io/user-directory/
 
 ![screen01](./assets/screen.PNG)
+
 
 
 ## Table of Contents
